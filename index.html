@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+<!-- Modified from url=(0050)https://uclic.ucl.ac.uk/teaching/ixsci/menusearch/ -->
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>HCI Online Lectures</title>
+      <script src="jquery-3.5.1.min.js"></script>
+      <link rel="shortcut icon" href="favicon.ico">
+
+      <style>
+        body{
+          font:14px Arial, san-serif;
+          border: 2px solid #444444;
+          padding: 1em;
+          text-align: center;
+        }
+        h1 {
+          font-size: 2.5em;
+        }
+        h2 {
+          font-size: 2em;
+        }
+        p, td {
+          font-size: 1.3em;
+          line-height: 200%;
+        }
+      </style>
+    </head>
+
+    <body>
+      <h1 id="intro-heading">HCI Online Lectures</h1>
+    <!--WELCOME-->
+    <div id="welcome" style="display: none">
+      <h2>Welcome to the online lecture.</h2>
+      <p>There are <a id="slotsLeft"></a> out of 44 slots available currently.</p>
+      <p><button id="toreq">Next</button></p>
+    </div>
+    <div id="closed" style="display: none">
+      <h2>The experiment has been closed.</h2>
+      <p>Thank you for your interest in our experiment!</p>
+    </div>
+
+    <!--GENERAL INSTRUCTIONS-->
+    <div id="requirements" style="display:none">
+      <h2>Requirements</h2>
+      <div id="text" >
+        <p>Thank you for your interest! You will be invited to watch two lecture videos on the topic of Fitts's Law, a widely applied model in human-computer interaction. After each video, a follow-up questionnaire (two in total) will be provided on this same website for you to answer. The whole process should take approximately thirty minutes.</p>  
+        <p class = "bold"><a style = "color: #4CAF50;">&#x2713 </a>Please make sure that:</p>
+        <ul>
+          <li>You are over 18 years old</li>
+          <li>You are a UK resident at the moment</li>
+          <li>You have a fast internet connection</li>
+          <li>You are using a laptop or desktop computer</li>
+          <li>You are at a place where you can use the speakers of your computer</li>
+        </ul>
+
+        <p class="bold">If you cannot meet all the requirements at the moment, you are welcomed to come back later.</p>
+        <p> Thank you!</p> 
+      </div>
+
+      <p><button id="toinfo">Next</button></p>
+
+      <style>
+        #requirements #text{
+          text-align: left;
+        }
+        #requirements ul li{
+          font-size: 1.3em;
+          line-height: 2em;
+        }
+        #requirements{
+          margin-left: 10%;
+          margin-right: 10%;
+        }
+      </style>
+
+    </div>
+
+    <!--INFO SHEET-->
+    <div id="info-sheet" style="display:none">
+      <h2>PARTICIPANT INFORMATION SHEET FOR ADULT</h2>
+      <p>UCL Research Ethics Committee Approval ID Number: UCLIC/1718/010/MSc Brumby</p>
+      <p class="bold">You will be emailed a copy of this sheet if you provide a valid email account in the next step.</p><br>
+      
+      <p id = "consent-intro">
+        <a class="bold">Title of Study:</a> The Representation of Instructors in Instructional Videos <br>
+
+        <a class="bold">Department:</a> UCL Interaction Centre<br>
+
+        <a class="bold">Name and Contact Details of the Researcher(s):</a> Junge Shi ([removed]) <br>
+
+        <a class="bold">Name and Contact Details of the Principal Researcher:</a>  Duncan Brumby ([removed]) <br>
+      </p><br>
+
+      <div id="info-main">
+        <p>
+          You are being invited to take part in a research project. Before you decided it is important for you to understand why the research is being done and what participation will involve. Please take time to read the following information carefully and discuss it with others if you wish. Ask us if there is anything that is not clear or if you would like more information. Take time to decide whether or not you wish to take part. Thank you for reading this.
+        </p>
+
+        <p>
+          1.	<a class="bold">What is the project’s purpose?</a><br>
+            There is a growing trend for instructional videos, especially under the current circumstances. People can watch these videos to learn many things: from learning how to cook a meal, to learning for school/university. In this research project we are interested in understanding how to design instructional videos to better support learning. 
+        </p>
+        <p>
+          2.	<a class="bold">Why have I been chosen?</a><br>
+          For this study we have recruited participants who are over the age of 18, and are residents of the United Kingdom.  
+        </p>
+        <p>
+          3.	<a class="bold">Do I have to take part?</a><br>
+          It is up to you to decide whether or not to take part.  If you do decide to take part, you will be emailed this information sheet to keep and be asked to sign a consent form. You can withdraw at any time without giving a reason and without it affecting any benefits that you are entitled to. If you decide to withdraw, you will be asked what you wish to happen to the data you have provided up to that point. 
+        </p>
+        <p>
+          4.	<a class="bold">What will happen to me if I take part?</a><br>
+          Your involvement in the research will take no more than 40 minutes of your time.  You will be asked to watch two different versions of a same 10-minute lecture video on this website, after each watching session you will be invited to answer a questionnaire. When a video is playing, your window/tab switching activities will be logged automatically, in an anonymized fashion. 
+        </p>
+        <p>
+          5.	<a class="bold">Will I be recorded and how will the recorded media be used?</a><br>
+          The anonymized log of your activities will be used only for analysis. No other use will be made of them without your written permission, and no one outside the project will be allowed access to the original log. 
+        </p>
+        <p>
+          6.	<a class="bold">What are the possible benefits of taking part?</a><br>
+          It is hoped that this work will help us to learn how to make better instructional videos so that people can learn new tasks easier from instructional videos. Additionally, if the data you provided passes our quality check, you will receive £7 through Prolific. 
+        </p>
+        <p>
+          7.	<a class="bold">What if something goes wrong?</a><br>
+          If you wish to make a complaint regarding your treatment by the researcher who is conducting this study please contact Duncan Brumby ([removed]). Should you feel that your complaint has not been handled satisfactorily please contact the Chair of the UCL Interaction Centre Ethics Officer ([removed]).
+        </p>
+        <p>
+          8.	<a class="bold">Will my taking part in this project be kept confidential?</a><br>
+          All the information that we collect about you during the course of the research will be kept strictly confidential. You will not be able to be identified in any ensuing reports or publications.
+        </p>
+        <p>
+          9.	<a class="bold">Limits to confidentiality</a><br>
+          Confidentiality may be limited and conditional and the researcher has a duty of care to report to the relevant authorities possible harm/danger to the participant or others.
+        </p>
+        <p>
+          10.	<a class="bold">What will happen to the results of the research project?</a><br>
+          This research is being conducted as part of an MSc Project and the results will be presented in a MSc dissertation. Student dissertations will be read by examiners and may also be made publicly available (i.e., published on a website by the student or by the university). The results of this work might also contribute to published research articles. All the information that we collect about you during the course of the research will be kept strictly confidential. You will not be able to be identified in any ensuing reports or publications.
+        </p>
+        <p>
+          11.	<a class="bold">Data Protection Privacy Notice </a><br>
+          The data controller for this project will be University College London (UCL). The UCL Data Protection Office provides oversight of UCL activities involving the processing of personal data, and can be contacted at data-protection@ucl.ac.uk. UCL’s Data Protection Officer can also be contacted at data-protection@ucl.ac.uk.<br>
+
+          Your personal data will be processed for the purposes outlined in this notice. The legal basis that would be used to process your personal data will be performance of a task in the public interest. <br>
+ 
+          <a class="italic">Your personal data will be processed so long as it is required for the research project.</a> If we are able to anonymise or pseudonymise the personal data you provide we will undertake this, and will endeavour to minimise the processing of personal data wherever possible. <br>
+
+          If you are concerned about how your personal data is being processed, please contact UCL in the first instance at data-protection@ucl.ac.uk. If you remain unsatisfied, you may wish to contact the Information Commissioner’s Office (ICO). Contact details, and details of data subject rights, are available on the ICO website at: https://ico.org.uk/for-organisations/data-protection-reform/overview-of-the-gdpr/individuals-rights/ <br>
+
+        </p>
+        <p>
+          12.	<a class="bold">Contact for further information</a><br>
+          If you would like to learn more about this research project, please contact Duncan Brumby ([removed]). <a class="bold">Thank you for reading this information sheet and for considering to take part in this research study.</a> 
+        </p>
+
+      </div><br>
+      <p><button id = "toconsent" >Next</button></p>
+    </div>
+
+    <!--CONSENT FORM-->
+    <div id="consent-form" style="display:none">
+      <h2>CONSENT FORM FOR ADULTS IN RESEARCH STUDIES</h2>
+        <p>Please complete this form after you have read the Information Sheet.</p>
+        <br>
+
+      <div id = "consent-intro">
+        <p>
+          <a class="bold">Title of Study:</a>The Representation of Instructors in Instructional Videos<br>
+          <a class="bold">Department</a>: UCL Interaction Centre<br>
+          <a class="bold">Name and Contact Details of the Researcher(s):</a> Junge Shi ([removed]). <br>
+          <a class="bold">Name and Contact Details of the Principal Researcher:</a> Duncan Brumby ([removed]). <br>
+          <a class="bold">Name and Contact Details of the UCL Data Protection Officer:</a> Louise Gaynor ([removed]).<br>
+          <a class="bold">This study has been approved by the UCL Research Ethics Committee:</a> Project ID number:[removed]<br>
+        </p><br>
+
+        <p>
+          Thank you for considering taking part in this research.  The person organising the research must explain the project to you before you agree to take part.  If you have any questions arising from the Information Sheet or explanation already given to you, please ask the researcher before you decide whether to join in.  You will be given a copy of this Consent Form to keep and refer to at any time.
+        </p><br>
+
+        <p class="bold">
+          I confirm that I understand that by ticking/initialling each box below I am consenting to this element of the study.  I understand that it will be assumed that unticked/initialled boxes means that I DO NOT consent to that part of the study.  I understand that by not giving consent for any one element that I may be deemed ineligible for the study.
+        </p><br>
+      </div>
+      
+      <form id = "form">
+        <table>
+          <tr>
+            <td>1.<a class = "required"> *</a>I confirm that I have read and understood the Information Sheet for the above study. I have had an opportunity to consider the information and what will be expected of me. I have also had the opportunity to ask questions which have been answered to my satisfaction and I would like to take part in watching two instructional videos and answer two questionnaires.</td>
+            <td><input class="box" id="c1" type="checkbox" required></td>
+          </tr><br>
+          <tr>
+            <td>2.<a class = "required"> *</a>I consent to participate in the study. I understand that my personal information (e.g., audio recordings of interviews with the researchers) will be used for the purposes explained to me.  I understand that according to data protection legislation, ‘public task’ will be the lawful basis for processing. </td>
+            <td><input class="box" id="c2" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>3.<a class = "required"> *</a>I understand that all personal information will remain confidential and that all efforts will be made to ensure I cannot be identified. I understand that my data gathered in this study will be saved anonymously and securely.  It will not be possible to identify me in any publications. </td>
+            <td><input class="box" id="c3" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>4.<a class = "required"> *</a>I understand that my information may be subject to review by responsible individuals from the University for monitoring and audit purposes. </td>
+            <td><input class="box" id="c4" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>5.<a class = "required"> *</a> I understand the potential risks of participating and the support that will be available to me should I become distressed during the course of the research.  </td>
+            <td><input class="box" id="c5" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>6.<a class = "required"> *</a> I understand the direct/indirect benefits of participating.  </td>
+            <td><input class="box" id="c6" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>7.<a class = "required"> *</a> I understand that the data will not be made available to any commercial organisations but is solely the responsibility of the researcher(s) undertaking this study.  </td>
+            <td><input class="box" id="c7" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>8.<a class = "required"> *</a> I understand that I will not benefit financially from this study or from any possible outcome it may result in in the future.  </td>
+            <td><input class="box" id="c8" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>9.<a class = "required"> *</a> I understand that I will be compensated for the portion of time spent in the study or fully compensated if I choose to withdraw.  </td>
+            <td><input class="box" id="c9" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>10.<a class = "required"> *</a> I agree that my anonymised research data may be used by others for future research. [No one will be able to identify you when this data is shared.]   </td>
+            <td><input class="box" id="c10" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>11. I understand that the information I have submitted will be published as a report and I wish to receive a copy of it.  </td>
+            <td><input class="box" id="c11" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>12.<a class = "required"> *</a> I hereby confirm that I understand the inclusion criteria as detailed in the Information Sheet.  </td>
+            <td><input class="box" id="c12" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>13.<a class = "required"> *</a> I hereby confirm that:<br>
+               <p class="indent">(a)	I am over 18 years old; and </p>
+               <p class="indent">(b)	I am currently a UK resident.</p> 
+            <td><input class="box" id="c13" type="checkbox" required></td>
+          </tr>
+          <tr>
+            <td>14.<a class = "required"> *</a> I am aware of who I should contact if I wish to lodge a complaint.  </td>
+            <td><input class="box" id="c14" type="checkbox" required></td>
+          </tr>
+        </table>
+        <br>
+
+        <P class="bold" style="text-align: left;">
+          If you would like your contact details to be retained so that you can be contacted in the future by UCL researchers who would like to invite you to participate in future studies of a similar nature, please tick the box below and provide an valid email. 
+        </P>
+
+        <table width = 100%>
+          <tr>
+            <td>I would be happy to be contacted via email.  </td>
+            <td width = 1%><input class="box" id="c15" type="checkbox"></td>
+          </tr>
+        </table>
+        <p>Email: <input id = "email" type="email" name="email" value=""></p><br>
+
+        <p><a class = "required"> *</a>Signature of participant: <input id = "signature" type="text" name="signature" placeholder="Type name/prolific ID here" required></p>
+        <p>Date: <a id="date"></a></p>
+        <br>
+
+        <p><button class="submit" id="todemog">Submit</button></p>
+    </form>
+    </div>
+
+    <!--consent form style-->
+    <style>
+      #info-sheet, #consent-form{
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      #info-main{
+        text-align: left;
+      }
+      #consent-form h2{
+        text-align: center;
+        font-weight: bold;
+      }
+      #consent-intro {
+        text-align: left;
+      }
+      .italic{
+        font-style: italic;
+      }
+      .bold{
+        font-weight: bold;
+      }
+      .indent{
+        text-indent: 1.5em;
+        font-size: 1em;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+      table{
+        border-collapse: collapse;
+      }
+      #form-text{
+        display: inline-block;
+        text-align: left;
+        width: 85%;
+      }
+      #form td{
+        text-align: left;;
+      }
+      .box{
+        display: inline-block;
+        vertical-align: middle;
+        text-align: right;
+        height: 2em;
+        width: 2em;
+        outline: 1px solid black;
+      }
+      .required{
+        color: #f00;
+        font-size: 1.5em;;
+        font-weight: bold;
+      }
+      #email{
+        font-size: 1.3em;
+        width: 20em;
+      }
+      #toconsent{
+        padding: 0.6em 1.5em ;
+        font-size: 1em;
+        background-color: #4CAF50;
+        border: none;
+      }
+      #toconsent:hover {
+          background-color: #7ab67c; 
+          color: white;
+      }
+      #toreq{
+        padding: 0.6em 1.5em ;
+        font-size: 1em;
+        background-color: #4CAF50;
+        border: none;
+      }
+      #toreq:hover {
+          background-color: #7ab67c;
+          color: white;
+      }
+      #toinfo{
+        padding: 0.6em 1.5em ;
+        font-size: 1em;
+        background-color: #4CAF50;
+        border: none;
+      }
+      #toinfo:hover {
+          background-color: #7ab67c;
+          color: white;
+      }
+      #form td{
+        font-size: 1.3em;
+      }
+    </style>
+
+    <!--DEMOGRAPHIC-->
+    <div id="demographic" style="display:none">
+      <h2>Demographic Information</h2>
+      <p>Information collected with this form will be anonymised and kept strictly confidential. Please answer faithfully.</p>
+      <form id="demog"> 
+        <p class="question">1.<a class = "required"> *</a> What is your age?</p>
+        <ul class='item'>
+          <li>
+            <input type="radio" id = "1.1" name="age" value = "under18" required>
+            <label for = "1.1">Under 18</label>
+          </li>
+          <li>
+            <input type="radio" id = "1.2" name="age" value = "18to24">
+            <label for = "1.2">18-24</label>
+          </li>
+          <li>
+            <input type="radio" id = "1.3" name="age" value = "25to34">
+            <label for = "1.3">25-34</label>
+          </li>
+          <li>
+            <input type="radio" id = "1.4" name="age" value = "35to44">
+            <label for = "1.4">35-44</label>
+          </li>
+          <li>
+            <input type="radio" id = "1.5" name="age" value = "45to54">
+            <label for = "1.5">45-54 </label>
+          </li>
+          <li>
+            <input type="radio" id = "1.6" name="age" value = "55to64">
+            <label for = "1.6">55-64</label>
+          </li>
+          <li>
+            <input type="radio" id = "1.7" name="age" value = "65to74">
+            <label for = "1.7">65-74</label>
+          </li>
+          <li>
+            <input type="radio" id = "1.8" name="age" value = "75to84">
+            <label for = "1.8">75-84</label>
+          </li>
+          <li>
+            <input type="radio" id = "1.9" name="age" value = "85AndOver">
+            <label for = "1.9">85 or over</label>
+          </li>
+          <li>
+            <input type="radio" id = "1.10" name="age" value = "notGiven">
+            <label for = "1.10">Prefer not to say</label>
+          </li>
+        </ul>
+
+        <p class="question">2.<a class = "required"> *</a> To which gender do you identify the most?</p>
+        <ul class='item'>
+          <li>
+            <input type="radio" id = "2.1" class="non-sd" name="gender" value = "female" required>
+            <label for = "2.1">Female</label>
+          </li>
+          <li>
+            <input type="radio" id = "2.2" class="non-sd" name="gender" value = "male">
+            <label for = "2.2">Male</label>
+          </li>
+          <li>
+            <input type="radio" id = "2.3" class="non-sd" name="gender" value = "non-binary">
+            <label for = "2.3">Non-binary</label>
+          </li>
+          <li>
+            <input id = "selfDesRadio" type="radio" name="gender" value = "SD">
+            <label for = "selfDesRadio">Prefer to self describe: </label>
+            <input id = "selfDesText" type="text" name="gender" placeholder="Please specify">
+          </li>
+          <li>
+            <input type="radio" id = "2.5" class="non-sd" name="gender" value = "notGiven">
+            <label for = "2.5">Prefer not to say.</label>
+          </li>
+        </ul>
+
+        <p class="question">3.<a class = "required"> *</a> What is the highest degree or level of education you have completed?</p>
+        <ul class='item'>
+          <li>
+            <input type="radio" id = "3.1" name="edu" value = "less than secondary" required>
+            <label for = "3.1">Less than high school</label>
+          </li>
+          <li>
+            <input type="radio" id = "3.2" name="edu" value = "secondary" required>
+            <label for = "3.2">Secondary education (high school)</label>
+          </li>
+          <li>
+            <input type="radio" id = "3.3" name="edu" value = "UG">
+            <label for = "3.3">Undergraduate education (college or university)</label>
+          </li>
+          <li>
+            <input type="radio" id = "3.4" name="edu" value = "training">
+            <label for = "3.4">Vocational training</label>
+          </li>
+          <li>
+            <input type="radio" id = "3.5" name="edu" value = "PG">
+            <label for = "3.5">Postgraduate education (masters or doctorate)</label>
+          </li>
+          <li>
+            <input type="radio" id = "3.6" name="edu" value = "notGiven">
+            <label for = "3.6">Prefer not to say</label>
+          </li>
+        </ul>
+
+        <p class="question">4.<a class = "required"> *</a> How often do you watch instructional videos — i.e., videos that teaches you how to use a software or how to prepare a dish?</p>
+        <ul class='item'>
+          <li>
+            <input type="radio" id = "4.1" name="exp" value = "daily or more" required>
+            <label for = "4.1">At least once a day</label>
+          </li>
+          <li>
+            <input type="radio" id = "4.2" name="exp" value = "2-6 per week">
+            <label for = "4.2">2 to 6 times per week</label>
+          </li>
+          <li>
+            <input type="radio" id = "4.3" name="exp" value = "weekly">
+            <label for = "4.3">Once a week</label>
+          </li>
+          <li>
+            <input type="radio" id = "4.4" name="exp" value = "2-3 per month">
+            <label for = "4.4">2 - 3 times per month</label>
+          </li>
+          <li>
+            <input type="radio" id = "4.5" name="exp" value = "monthly or less">
+            <label for = "4.5">Once a month or less</label>
+          </li>
+        </ul>
+        <div id="horizontal">
+          <p class="question">5.<a class = "required"> *</a> How do you rate your expertise on the topic, Fitts's Law.</p><br>
+          <ul class='item'>
+            <li>
+              <input type="radio" id = "5.1" name="fLaw" value = "1" required>
+              <label for = "5.1">I have not heard of it</label>
+            </li>
+            <li>
+              <input type="radio" id = "5.2" name="fLaw" value = "2">
+              <label for = "5.2"></label>
+            </li>
+            <li>
+              <input type="radio" id = "5.3" name="fLaw" value = "3">
+              <label for = "5.3"></label>
+            </li>
+            <li>
+              <input type="radio" id = "5.4" name="fLaw" value = "4">
+              <label for = "5.4"></label>
+            </li>
+            <li>
+              <input type="radio" id = "5.5" name="fLaw" value = "5">
+              <label for = "5.5"></label>
+            </li>
+            <li>
+              <input type="radio" id = "5.6" name="fLaw" value = "6">
+              <label for = "5.6"></label>
+            </li>
+            <li>
+              <input type="radio" id = "5.7" name="fLaw" value = "7">
+              <label for = "5.7">My study/work has covered it</label>
+            </li>
+          </ul>
+
+          <p class="question">6.<a class = "required"> *</a> How interested are you in the topic, Fitts's Law?</p><br>
+          <ul class='item'>
+            <li>
+              <input type="radio" id = "6.1" name="interest" value = "1" required>
+              <label for = "6.1">Not at all</label>
+            </li>
+            <li>
+              <input type="radio" id = "6.2" name="interest" value = "2">
+              <label for = "6.2"></label>
+            </li>
+            <li>
+              <input type="radio" id = "6.3" name="interest" value = "3">
+              <label for = "6.3"></label>
+            </li>
+            <li>
+              <input type="radio" id = "6.4" name="interest" value = "4">
+              <label for = "6.4"></label>
+            </li>
+            <li>
+              <input type="radio" id = "6.5" name="interest" value = "5">
+              <label for = "6.5"></label>
+            </li>
+            <li>
+              <input type="radio" id = "6.6" name="interest" value = "6">
+              <label for = "6.6"></label>
+            </li>
+            <li>
+              <input type="radio" id = "6.7" name="interest" value = "7">
+              <label for = "6.7">Very much so</label>
+            </li>
+        </ul>
+        </div>
+        <p class="question">7. What is your occupation? (Please leave blank if you would rather not to say.)</p><br>
+        <ul class="item">
+          <input id="occupationBox" type="text" name="occupation" placeholder="Please specify">
+        </ul>
+
+        <p><button id="toexp" class="submit">Submit</button></p>
+        
+      </form>
+
+      <style>
+        #horizontal .question{
+            display:block;
+            font-weight: bold;
+            margin-bottom:10px;
+            text-align: left;
+          }
+          #horizontal .item {
+            list-style:none;
+            width:140%;
+            margin:0;
+            padding:2em 0 0 0;
+            display:block;
+          }
+          #horizontal .item:last-of-type {border-bottom:0;}
+
+          /*Bar behind radios*/
+          #horizontal .item:before {
+            content: '';
+            position:relative;
+            display:block;
+            background-color:#cacaca;
+            top:1em;
+            left:6%;
+            height:0.4em;
+            width:63%;
+          }
+          #horizontal .item li {
+            display:inline-block;
+            width:10%;
+            vertical-align: top;
+            text-align: center;
+          }
+          #horizontal .item li input[type=radio] {
+            display:block;
+            position:relative;
+            top:0;
+            left:50%;
+
+            width: 2em;
+            height: 2em;
+          }
+          #horizontal .item li label {
+            width:100%;
+            line-height: 1em;
+          }
+
+        #demog {
+          display: inline-block;
+          width: 65%;
+          align-content: center;
+        }
+
+        #demog .item{
+          text-align: left;
+          font-size: 1.3em;
+          list-style: none;
+          line-height:2.5em;
+          margin:0;
+          padding:0 0 2.3em;
+          display:block;
+          border-bottom:2px solid #efefef;
+        } 
+
+        input[type=radio]{
+          width: 1.4em;
+          height: 1.4em;
+          margin: 0px 5px 0px 0px;
+          vertical-align: middle;
+        }
+
+        input[type=text]{
+          width: 20em;
+          font-size: 1.3em;
+        }
+
+        #demog li label{
+          vertical-align: middle;
+        }
+
+        #demog .question {
+          width: 100%;
+          font-size: 1.4em;
+          font-weight: bold;
+          line-height: 2em;
+          text-align: left;
+        }
+
+        #demog #occupationBox{
+          width: 100%;
+        }
+
+        .submit {
+          padding: 0.6em 1.5em ;
+          font-size: 1em;
+          background-color: #4CAF50;
+          border: none;
+        }
+        .submit:hover {
+          background-color: #7ab67c;
+          color: white;
+        }
+      </style>
+    </div>
+
+    <div id="disqualified" style="display: none">
+      <h2>Thank you for your interest in this study.</h2>
+      <p>However, we cannot collect data from participants who are under 18 years old. The information you have already given will not be saved.</p>
+    </div>
+
+    <div id="mobile" style="display: none">
+      <h2>It seems that you are using a mobile device.</h2>
+      <p>Mobile devices are not supported at the moment. Please switch to a laptop or a desktop computer and try again. Thank you!</p>
+
+      <style>
+        #mobile p, #disqualified p {
+          text-align: left;
+        }
+      </style>
+    </div>
+
+    <!--INTRO BEHAVIOUR-->
+    <script>
+      var userID ;
+      var condition;
+      var signature = null;
+      var email;
+      var today = new Date();
+      var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+      var consentArray = [];
+
+      //auto assign
+      var slotsLeft = "loading...";
+      var aLeft = undefined;
+      var bLeft = undefined;
+      var cLeft = undefined;
+      var dLeft = undefined;
+      var temparr = [];
+      var writearr = [];
+      var entryTime = undefined;
+
+      var shortID;
+
+      if(mobileCheck()){
+        $('#intro-heading').hide();
+        $('#welcome').hide();
+        $('#mobile').show();
+      }else{
+        $('#welcome').show();
+        readLeft();
+
+        //Demographic Form behaviour 
+        $("#selfDesRadio").click( function(){
+          if( $(this).is(':checked')){
+            document.getElementById("selfDesText").required = true;
+          }
+        });
+
+        $(".non-sd").click( function(){
+          document.getElementById("selfDesText").required = false;
+        });
+
+        $("#selfDesText").click( function(){
+          document.getElementById("selfDesRadio").checked = true;
+          document.getElementById("selfDesText").required = true;
+        });
+
+        $(document).ready(function(){
+            var $form = $('#demog');
+            $form.submit(
+              function(){
+                var age = document.getElementsByName("age");
+                for (var i=0, length = age.length; i<length; i++){
+                  if(age[i].checked){
+                    if(age[i].value != "under18"){
+                      consentArray.push({
+                          participant: userID,
+                          email: "NA",
+                          sign: "NA",
+                          question: 'age',
+                          answer: age[i].value,
+                      })
+                      writeDemog();
+                      
+                      $('#demographic').hide();
+                      $('#start').show();
+                      //window.scrollTo(0, 0); 
+                    
+                    }
+                    else{
+                      $('#demographic').hide();
+                      $('#start').hide();
+                      $("#disqualified").show();
+                      window.scrollTo(0, 0); 
+                    }
+                    break;
+                  }
+                }
+                return false;
+              }
+            );
+        });
+
+        function writeDemog(){
+              var gender = document.getElementsByName("gender");
+              for (var i=0, length = gender.length; i<length; i++){
+                if(gender[i].checked){
+                  if(gender[i].value!="SD"){
+                    consentArray.push({
+                        participant: userID,
+                        email: "NA",
+                        sign: "NA",
+                        question: "gender",
+                        answer: gender[i].value,
+                        //add the self describe part
+                    })
+                    break;
+                  }
+                  else if(gender[i].value = "SD"){
+                    consentArray.push({
+                        participant: userID,
+                        email: "NA",
+                        sign: "NA",
+                        question: 'gender',
+                        answer: document.getElementById("selfDesText").value,
+                    })
+                    break;
+                  }
+                }
+              }
+              //get education
+              var edu = document.getElementsByName("edu");
+              for (var i=0, length = edu.length; i<length; i++){
+                if(edu[i].checked){
+                    consentArray.push({
+                        participant: userID,
+                        email: "NA",
+                        sign: "NA",
+                        question: "edu",
+                        answer: edu[i].value,
+                    })
+                    break;
+                }
+              }
+              //get experience
+              var exp = document.getElementsByName("exp");
+              for (var i=0, length = exp.length; i<length; i++){
+                if(exp[i].checked){
+                    consentArray.push({
+                        participant: userID,
+                        email: "NA",
+                        sign: "NA",
+                        question: "exp",
+                        answer: exp[i].value,
+                    })
+                    break;
+                }
+              }
+              //get experience in fitts's law
+              var fLaw = document.getElementsByName("fLaw");
+              for (var i=0, length = fLaw.length; i<length; i++){
+                if(fLaw[i].checked){
+                    consentArray.push({
+                        participant: userID,
+                        email: "NA",
+                        sign: "NA",
+                        question: "exp in fitts's law",
+                        answer: fLaw[i].value,
+                    })
+                    break;
+                }
+              }
+              //get interest in fitts's law
+              var interest = document.getElementsByName("interest");
+              for (var i=0, length = interest.length; i<length; i++){
+                if(interest[i].checked){
+                    consentArray.push({
+                        participant: userID,
+                        email: "NA",
+                        sign: "NA",
+                        question: "interest",
+                        answer: interest[i].value,
+                    })
+                    break;
+                }
+              }
+              //get occupation
+              var occupation = document.getElementById("occupationBox").value;
+              consentArray.push({
+                participant: userID,
+                email: "NA",
+                sign: "NA",
+                question: "occupation",
+                answer: occupation,
+              })
+
+              console.log(consentArray);
+        }
+
+        document.getElementById("slotsLeft").innerHTML = slotsLeft;
+
+        function assignCondition(){
+          //assign conditions
+          var randomIndex = Math.floor((Math.random() * 44) + 1); //inclusive
+          if(randomIndex <= 11){
+            if (aLeft >= 1){
+              condition = "A";
+              aLeft--;
+
+              document.getElementById("videoC").setAttribute("preload", "none");
+              document.getElementById("videoD").setAttribute("preload", "none");
+            }
+          }
+          else if((randomIndex > 11) &&(randomIndex <= 22)){
+            if (bLeft >= 1){
+              condition = "B";
+              bLeft--;
+
+              document.getElementById("videoC").setAttribute("preload", "none");
+              document.getElementById("videoD").setAttribute("preload", "none");
+            }
+          }
+          else if((randomIndex > 22) &&(randomIndex <= 33)){
+            if (cLeft >= 1){
+              condition = "C";
+              cLeft--;
+
+              document.getElementById("videoA").setAttribute("preload", "none");
+              document.getElementById("videoB").setAttribute("preload", "none");
+            }
+          }
+          else if(randomIndex > 33){
+            if (dLeft >= 1){
+              condition = "D";
+              dLeft--;
+
+              document.getElementById("videoA").setAttribute("preload", "none");
+              document.getElementById("videoB").setAttribute("preload", "none");
+            }
+          }
+          userID = guid();
+          console.log("userID: " + userID);
+          console.log("condition assigned: " + condition);
+        }
+
+        function readLeft(){
+          $.ajax({
+              type: "GET",
+              url: 'left.csv',
+              dataType: "text",
+              success: function(data){
+                convertToArray(data);
+                }
+          });
+        }
+
+        //Read data from server
+        function convertToArray(data){
+            var dataLines = data.split(/\r\n|\n/);
+            var headers = dataLines[0].split(',');
+            var lines = [];
+
+            for (var i=1; i<dataLines.length; i++) {
+                var value = dataLines[i].split(',');
+                if (value.length == headers.length) {
+                    
+                    for (var j=0; j<headers.length; j++) {
+                        temparr.push(value[j]);
+                    }
+                }
+            }
+
+            //Write into the 4 variables
+            aLeft = temparr[0];
+            bLeft = temparr[1];
+            cLeft = temparr[2];
+            dLeft = temparr[3];
+            console.log("Read from log: "+temparr);
+
+            //note slotsLeft is a integer instead of string
+            slotsLeft = Number(aLeft) + Number(bLeft) + Number(cLeft) + Number(dLeft);
+            document.getElementById("slotsLeft").innerHTML = slotsLeft;
+
+            //show corresponding text
+            if(slotsLeft!=undefined){
+              if(slotsLeft>0){
+                  $('#welcome').show();
+                  window.scrollTo(0, 0); 
+              }
+              else{
+                $('#welcome').hide();  
+                $('#closed').show();
+                window.scrollTo(0, 0); 
+              }
+            }
+          }
+
+        function guid() {
+          var left = 44 - slotsLeft;
+          var date = new Date();
+          var uid = left + condition + date.getUTCDate() + "/" + (date.getUTCMonth()+1)+ "h" + date.getUTCHours() + "m" + date.getUTCMinutes();
+          shortID = left + condition;
+          return uid;
+        }
+
+        $('#toreq').click(function() {
+          $('#intro-heading').hide();
+          $('#welcome').hide();
+          $('#requirements').show();
+          window.scrollTo(0, 0);
+        });
+
+        $('#toinfo').click(function() {
+            $('#requirements').hide();
+            $('#info-sheet').show();
+            window.scrollTo(0, 0); 
+
+            while(1 == 1){
+              assignCondition();
+              if(condition != undefined){ 
+                //update the 4 left
+                  writearr = [aLeft,bLeft,cLeft,dLeft];
+                  //update slots left
+                  $.post('update.php', {data : writearr}, function(result){
+                    console.log("post: " + writearr);
+                  });
+                break;
+              }
+            }
+        });
+
+        $('#toconsent').click(function() {
+            $('#info-sheet').hide();
+            $('#consent-form').show();
+            window.scrollTo(0, 0); 
+
+            document.getElementById("date").innerHTML = date;
+        });
+
+        $('#todemog').click(function() {
+          signature = $('#signature').val();
+          email = $('#email').val();
+
+          if(signature!= ""){
+            consentArray.push({
+                      participant: userID,
+                      email: email,
+                      sign: signature,
+                      question: "NA",
+                      answer: "NA",
+                    })
+          }
+
+          //get input from checkboxes
+          for(var questionIndex = 1; questionIndex < 16; questionIndex++){
+            var consent;
+            var question = "c" + questionIndex;
+            var c = document.getElementById(question);
+
+            if(c.checked){
+              consent = c.checked;
+
+            }
+            else if (!c.checked){
+              consent = c.checked;
+            }
+
+            if(signature != ""){
+                  consentArray.push({
+                      participant: userID,
+                      email: "NA",
+                      sign: "NA",
+                      question: question,
+                      answer: consent,
+                  })
+            }
+          }
+        });
+
+        $(document).ready(function() {
+            var $form = $('#form');
+            $form.submit(
+              function(){
+                $('#consent-form').hide();
+                $('#demographic').show();
+                window.scrollTo(0, 0);
+                return false;
+              }
+            );
+        });
+      }
+
+      function mobileCheck(){
+        //source: http://detectmobilebrowsers.com/
+        var check = false;
+        (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+        return check;
+      }
+    </script>
+
+    <!--General Instruction-->
+      <div id="start" class="message" style="display:none">
+          <h2>General Instructions</h2>
+
+          <div id = "main">
+            <p>Thank you for your participation!</p>
+            <p>You will be invited to watch two 11-minute videos on the topic of Fitts's Law. Once the video has started, you will not be able to pause it.</p>
+  
+              <p><a style = "color: #f00; font-weight: bold;">&#x2717 </a>Please do <a class = "bold">NOT</a>:</p>
+              <ul>
+                <li>Use the browser back button or the refresh button</li>
+                <li>Close this website (browser tab) half-way if you wish your data to be collected</li>
+              </ul>
+
+              <p>At the end of each video, please answer the prompted immersive experience questionnaire. Each questionnaire should take less than 5 minutes to complete. Click on the "Next" button to proceed.</p>
+          </div><br>
+
+          <p><button id="toinstr">Next</button></p>
+          
+          <style>
+            #start #main{
+              text-align: left;
+            }
+            #start ul li{
+              font-size: 1.3em;
+              line-height: 2em;
+            }
+          </style>
+      </div>
+
+      <!--INSTRUCTIONS 1-->
+      <div id="instruction" class="message" role="presentation" style="display:none">
+        <h2>Video 1</h2>  
+        <p id="instruction-message">
+              The first video will last about 11 minutes. You will not be able to pause the video once started. The immersive experience questionnaire will appear right after.
+          </p>    
+
+          <p><button id="tostart" class="tostart">Read the instructions again</button>
+          <button id="tovideo" class="tovideo">Proceed to the video player</button></p>
+
+          <style>
+            #toinstr{
+              padding: 0.6em 1.5em;
+              font-size: 1em;
+              background-color: #4CAF50;
+              border: none;
+            }
+            #toinstr:hover {
+              background-color: #7ab67c;
+              color: white;
+            }
+            #tovideo{
+              padding: 0.6em 1.5em;
+              font-size: 1em;
+              background-color: #4CAF50;
+              border: none;
+            }
+            #tovideo:hover {
+              background-color: #7ab67c;
+              color: white;
+            }
+            #tostart{
+              padding: 0.6em 1.5em;
+              font-size: 1em;
+              background-color: #b8b8b8;
+              border: none;
+            }
+            #tostart:hover {
+              background-color: #eeeeee;
+            }
+            #play{
+              padding: 0.6em 1.5em;
+              font-size: 1em;
+              background-color: #b8b8b8;
+              border: none;
+            }
+            #play:hover {
+              background-color: #eeeeee;
+            }
+          </style>
+      </div>
+
+      <!--INSTRUCTIONS 2-->
+      <div id="instruction2" class="message" role="presentation" style="display:none">
+        <h2>Video 2</h2> 
+        <p id="instruction-message2">
+          Please watch the second video. It will also last around 11 minutes. The second immersive experience questionnaire will appear after the video.</p>
+            <p><button id="tovideo" class="tovideo">Proceed to the video player</button></p>
+
+        <style>
+          #start #main, #instruction-message, #instruction-message2{
+            text-align: left;
+            margin-left: 10%;
+            margin-right: 10%;
+          } 
+        </style>    
+      </div>
+
+      <!--VIDEO-->
+      <div id="video" style="display:none">
+        <video id= "videoA" width="320" height="240" preload="auto" style="display:none" onplay="detectSwitching()" onended="videoEnds()" oncontextmenu="return false;">
+          <source src = "video/iFun.mp4" type="video/mp4">
+        </video>
+
+        <video id= "videoB" width="320" height="240" preload="auto" style="display:none" onplay="detectSwitching()" onended="videoEnds()" oncontextmenu="return false;">
+          <source src = "video/iPro.mp4" type="video/mp4">
+        </video>
+
+        <video id= "videoC" width="320" height="240" preload="auto" style="display:none" onplay="detectSwitching()" onended="videoEnds()" oncontextmenu="return false;">
+          <source src = "video/THFun.mp4" type="video/mp4">
+        </video>
+
+        <video id= "videoD" width="320" height="240" preload="auto" style="display:none" onplay="detectSwitching()" onended="videoEnds()" oncontextmenu="return false;">
+          <source src = "video/THPro.mp4" type="video/mp4">
+        </video>
+
+        <p>
+          <button id="play">Play</button>
+          <button id="toIEQ" style="display:none">Proceed to the questionnaire</button>
+        </p>
+        
+        <style>
+          #videoA, #videoB, #videoC, #videoD{
+            width: 90%;
+            height: auto;
+          }
+          #video{
+            width: 90%;
+          }
+          #toIEQ {
+            padding: 0.6em 1.5em ;
+            font-size: 1em;
+            background-color: #4CAF50;
+            border: none;
+          }
+          #toIEQ:hover {
+            background-color: #7ab67c;
+            color: white;
+          }
+        </style>
+
+      </div>
+
+      <!--FILM IEQ-->
+      <div id="IEQ1" style = "display: none">
+        <h2 class="likertHeader">Immersive Experience Questionnaire</h1>
+        <p class="likertDes">Please answer this questionnaire with the video you have just watched in mind.</p>
+
+        <form id="IEQform"> 
+          <p class="statement">1. To what extent did the video hold your attention?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i1" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i1" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i1" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i1" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i1" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i1" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i1" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul><br>
+          
+          <p class="statement">2. To what extent did you feel you were focused on the instructional video?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i2" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i2" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i2" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i2" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i2" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i2" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i2" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">3. How much effort did you put into watching the video?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i3" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i3" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i3" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i3" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i3" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i3" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i3" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">4. Did you feel that you were trying your best to follow the events of the video?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i4" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i4" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i4" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i4" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i4" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i4" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i4" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <!--note that question 5,6,7 are reversed here, the answers will be reversed back when writing the data-->
+          <p class="statement">5. To what extent did you feel consciously aware of being in the real world whilst watching?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i5" value = "7" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i5" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i5" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i5" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i5" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i5" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i5" value = "1">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">6. To what extent were you aware of yourself in your surroundings?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i6" value = "7" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i6" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i6" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i6" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i6" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i6" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i6" value = "1">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">7. To what extent did you notice events taking place around you?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i7" value = "7" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i7" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i7" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i7" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i7" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i7" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i7" value = "1">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">8. To what extent could you picture yourself in the scene of the events shown in the video? </p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i8" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i8" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i8" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i8" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i8" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i8" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i8" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">9. To what extent did you feel like you were separated from your real-world environment?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i9" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i9" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i9" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i9" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i9" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i9" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i9" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">10. To what extent did you feel that the video was something you were experiencing, rather than something you were just watching?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i10" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i10" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i10" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i10" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i10" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i10" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i10" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">11. To what extent was your sense of being in the environment shown in the video stronger than your sense of being in the real world?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i11" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i11" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i11" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i11" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i11" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i11" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i11" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">12. To what extent did you find the concepts and themes of the video challenging?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i12" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i12" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i12" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i12" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i12" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i12" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i12" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">13. To what extent did you feel motivated to keep on watching?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i13" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i13" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i13" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i13" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i13" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i13" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i13" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">14. To what extent did you find the concepts and themes easy to understand?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i14" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i14" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i14" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i14" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i14" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i14" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i14" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">15. To what extent did you feel like you were making progress towards understanding what was happening, and what you thought might happen at the end?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i15" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i15" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i15" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i15" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i15" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i15" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i15" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">16. How well do you think you understood what happened?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i16" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i16" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i16" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i16" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i16" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i16" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i16" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">17. To what extent were you interested in seeing how the events in the video would progress?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i17" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i17" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i17" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i17" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i17" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i17" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i17" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">18. How much did you want the events in the video to unfold successfully for the main characters involved?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i18" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i18" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i18" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i18" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i18" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i18" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i18" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">19. Were you in suspense about how the events would unfold?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i19" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i19" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i19" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i19" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i19" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i19" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i19" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">20. At any point did you find yourself become so involved that you wanted to speak to the video directly?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i20" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i20" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i20" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i20" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i20" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i20" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i20" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">21. To what extent did you enjoy the cinematography, graphics and/or imagery?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i21" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i21" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i21" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i21" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i21" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i21" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i21" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">22. How much would you say you enjoyed watching the video?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i22" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i22" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i22" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i22" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i22" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i22" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i22" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">23. When it was over, were you disappointed that you had to stop watching?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i23" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i23" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i23" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i23" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i23" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i23" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i23" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p class="statement">24. Would you like to watch more of this, or similar content, in the future?</p>
+          <ul class='item'>
+            <li>
+              <input type="radio" name="i24" value = "1" required>
+              <label>Not at all</label>
+            </li>
+            <li>
+              <input type="radio" name="i24" value = "2">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i24" value = "3">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i24" value = "4">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i24" value = "5">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i24" value = "6">
+              <label></label>
+            </li>
+            <li>
+              <input type="radio" name="i24" value = "7">
+              <label>Very much so</label>
+            </li>
+          </ul>
+
+          <p style="text-align:center;">Please make sure you have stable internet connection before submitting.</p>
+          <p style="text-align:center;"><button id="submitIEQ" class="submit">Submit</button></p>
+        </form>
+        
+        <style>
+          #IEQ1{
+            width: 100%;
+          }
+          #IEQform p {
+            text-align: left;
+            font-weight: bold;
+          }
+          #IEQform .statement{
+            margin-left: 10%;
+            margin-right: 10%;
+          }
+
+          h1 .likertHeader{
+            /*padding-left:4.25%;*/
+            margin:20px 0 0;
+            color: green;
+          }
+          p .likertDes{
+            /*font-size: 14px;*/
+            /*padding-left:4.25%;*/
+            margin:20px 0 0;
+          }
+          form{
+            padding:0;
+            margin:0;
+            width: 85%;
+            display: inline-block;
+          }
+          #IEQForm .statement{
+            display:block;
+            font-weight: bold;
+            padding: 60px 0 0 4.25%;
+            margin-bottom:10px;
+            text-align: left;
+          }
+          #IEQform .item {
+            list-style:none;
+            width:100%;
+            margin:0;
+            padding:2em 0 5em 0;
+            display:block;
+            border-bottom:2px solid #efefef;
+          }
+          #IEQform .item:last-of-type {border-bottom:0;}
+
+          /*Bar behind radios*/
+          #IEQform .item:before {
+            content: '';
+            position:relative;
+            display:block;
+            background-color:#cacaca;
+            top:1.1em;
+            left:19%;
+            height:0.4em;
+            width:63%;
+          }
+          #IEQform .item li {
+            display:inline-block;
+            width:10%;
+            vertical-align: top;
+          }
+          #IEQform .item li input[type=radio] {
+            display:block;
+            position:relative;
+            top:0;
+            left:50%;
+            margin-left:-6px;
+            width: 2em;
+            height: 2em;
+          }
+          #IEQform .item li label {
+            width:100%;
+          }
+          form .buttons {
+            margin:30px 0;
+            padding:0 4.25%;
+            text-align:right
+          } 
+          form .finish {
+            padding: 0.6em 1.5em ;
+            font-size: 1em;
+            background-color: #7ab67c;
+            border: none;
+          }
+          form .finish:hover {
+            background-color: #4CAF50;
+            color: white;
+          }
+        </style>
+      </div>
+
+      <!--FEEDBACK-->
+      <div id="complete-area" class="result" style="display:none">
+        <h2>You have reached the end of the experiment.</h2>
+        <p>Your participant ID is "<a id="PID-atend" class = "bold" style = "color: #4CAF50;"></a>". Please take note of this ID and quote it in all future correspondence.</p>
+         <p>Thank you for your participation! Please click on the "Done" to complete the study.</p>
+        <p><button id="finish">Done</button></p>
+
+        <style>
+          #finish{
+            padding: 0.6em 1.5em;
+            font-size: 1em;
+            background-color: #4CAF50;
+            border: none;
+          }
+          #finish:hover {
+              background-color: #7ab67c;
+              color: white;
+          }
+        </style>
+      </div>
+
+      <!--EXPERIMENT BEHAVIOUR-->
+      <script>
+        var inFocus;
+        var switchCount = 0;
+        var ended = false;
+        var playing = false;
+        var scene;
+        var leaveTime;
+        var resumeTime;
+        var startTime;
+        var endTime;
+        var switchAt;
+        var switchDuration;
+        dataArray = [];
+        var end = 0;
+
+        //show instructions
+        $('#toinstr').click(function() {
+          scene = "instr";
+          $('.message').hide();
+          $("#intro-heading").remove();
+          $('#instruction').show();
+          window.scrollTo(0, 0); 
+        });
+
+        $('#tostart').click(function() {
+          $('#instruction').hide();
+          $("#intro-heading").show();
+          $('#start').show();
+          window.scrollTo(0, 0); 
+        });
+        
+        //show and play video 1, start detection
+        $('.tovideo').click(function() {
+          scene = "video";
+          $('.message').hide();
+          $('#video').css("display", "inline-block");
+
+          //condition A: Video A then Video B
+          if(condition == "A"){
+            if(end == 0){
+              $('#videoA').css("display", "inline-block");
+            }
+            if(end == 1){
+              switchCount = 0;
+              $('#videoA').hide();
+              $('#play').css("display", "inline-block");
+              $('#videoB').css("display", "inline-block");
+            }
+          }
+          //condition B: Video B then Video A
+          else if(condition == "B"){
+            if(end == 0){
+              $('#videoB').css("display", "inline-block");
+            }
+            if(end == 1){
+              switchCount = 0;
+              $('#videoB').hide();
+              $('#play').css("display", "inline-block");
+              $('#videoA').css("display", "inline-block");
+            }
+          }
+          //condition B: Video C then Video D
+          else if(condition == "C"){
+            if(end == 0){
+              $('#videoC').css("display", "inline-block");
+            }
+            if(end == 1){
+              switchCount = 0;
+              $('#videoC').hide();
+              $('#play').css("display", "inline-block");
+              $('#videoD').css("display", "inline-block");
+            }
+          }
+          //condition B: Video D then Video C
+          else if(condition == "D"){
+            if(end == 0){
+              $('#videoD').css("display", "inline-block");
+            }
+            if(end == 1){
+              switchCount = 0;
+              $('#videoD').hide();
+              $('#play').css("display", "inline-block");
+              $('#videoC').css("display", "inline-block");
+            }
+          }
+        });
+
+        $('#play').click(function(){
+          if(condition == "A"){
+            if(end == 0){
+              $('#videoA').get(0).play()
+              entryTime = Date.now();
+              console.log("Timer Started.");
+            }
+            if(end == 1){
+              $('#play').css("display", "inline-block");
+              $('#videoB').get(0).play();
+            }
+          }
+          //condition B: Video B then Video A
+          else if(condition == "B"){
+            if(end == 0){
+              $('#videoB').get(0).play();
+              entryTime = Date.now();
+              console.log("Timer Started.");
+            }
+            if(end == 1){
+              $('#play').css("display", "inline-block");
+              $('#videoA').get(0).play();
+            }
+          }
+          //condition B: Video C then Video D
+          else if(condition == "C"){
+            if(end == 0){
+              $('#videoC').get(0).play();
+              entryTime = Date.now();
+              console.log("Timer Started.");
+            }
+            if(end == 1){
+              $('#play').css("display", "inline-block");
+              $('#videoD').get(0).play();
+            }
+          }
+          //condition B: Video D then Video C
+          else if(condition == "D"){
+            if(end == 0){
+              $('#videoD').get(0).play();
+              entryTime = Date.now();
+              console.log("Timer Started.");
+            }
+            if(end == 1){
+              $('#videoC').get(0).play();
+            }
+          }
+          $('#play').css("display", "none");
+        });
+
+        $('#toIEQ').click(function() {
+          $('#video').hide();
+          scene = "IEQ";
+          if(end == 1){
+            $('#IEQ1').css("display", "inline-block");
+          }
+          if(end == 2){
+            //clear the previous IEQ
+            document.getElementById("IEQform").reset();
+            $('#IEQ1').css("display", "inline-block");
+          }
+        });
+
+        //delay the form submition
+        $(document).ready(function() {
+          var $form = $('form');
+          $form.submit(
+            function(){
+            // what end==1, why?
+              if(end == 1){
+                $('#IEQ1').hide();
+                $('#instruction2').css("display", "inline-block");
+                ended = false;
+                $('#toIEQ').hide();
+              }
+              if(end == 2){
+                  //save csv;
+                  saveCSV();
+                  //hide IEQ
+                  $('#IEQ1').hide();
+              }
+              return false;
+            }
+          );
+        });
+
+        $("#submitIEQ").click(function() {
+          submitForm();
+        });
+
+        $("#finish").click(function() {
+          location.replace("https://app.prolific.co/submissions/complete?cc=45FFA843");
+        });
+
+        function videoEnds() {
+          if (!ended){
+            endTime = Date.now();
+            console.log("video ended, at: " + endTime);
+          }
+          playing = false;
+          ended = true;
+          end ++;
+         
+          $('#toIEQ').css("display", "inline-block");
+        }
+
+        //detect switching and write data. 
+        function detectSwitching() {
+          playing = true;
+          if (scene == "video" && playing){
+            ended = false;
+            startTime = Date.now();
+            console.log("Video started, at: "+startTime);
+          }
+          
+          window.onblur = function(){
+            if (scene == "video" && playing){
+              inFocus = false;
+              leaveTime = Date.now();
+              var videoPlaying = document.getElementById(getCurrentVideo());
+              switchAt = videoPlaying.currentTime;
+            }
+          }
+
+          window.onfocus  = function(){
+            if (scene == "video"){
+              if(playing){
+                inFocus = true;
+                resumeTime = Date.now();
+              }
+              if (!ended){
+                if(playing){
+                  switchDuration = resumeTime - leaveTime;
+                  console.log(switchCount +". "+ "@"+ switchAt + " Duration: " + switchDuration + " ms");
+                  switchCount ++;
+                }
+              }
+              else{
+                  //for if participant switched away till the end of video
+                  switchDuration = endTime - leaveTime;
+                  console.log(switchCount +". "+ "@"+ switchAt + " Duration: " + switchDuration + " ms");
+                  switchCount ++;
+                  scene = "";
+                  playing = false;
+              }
+            
+              //write data
+                dataArray.push({
+                        participant: userID,
+                        condition: condition,
+                        switchNo: switchCount,
+                        switchStarted: switchAt,
+                        duration: switchDuration,
+                        question: "NA",
+                        answer: "NA",
+                })
+              }
+          }
+        }
+        
+        function saveCSV() {
+          //write in completion time
+          var diff = Date.now() - entryTime;
+          var completionTime = millisToMS(diff);
+          dataArray.push({
+                  participant: userID,
+                  condition: completionTime,
+                  switchNo: "NA",
+                  switchStarted: "NA",
+                  duration: "NA",
+                  question: "NA",
+                  answer: "NA",
+          })
+          console.log("Timer ended.")
+          console.log(dataArray);
+          
+          var jsonObject = JSON.stringify(dataArray);
+          
+          var csv = '"ParticipantID", "Condition", "SwitchNo", "Duration", "Question", "Answer"\n';
+          csv = csv + ConvertToCSV(jsonObject);
+
+          //save consent and demographic info 
+          var consentObject = JSON.stringify(consentArray);
+          $.post('saveConsent.php',{data : consentObject},function(result){
+          });
+
+          //save experimental data to server
+          $.post('finish.php',{data : jsonObject},function(result){
+              document.getElementById("PID-atend").innerHTML = shortID;
+              $('#complete-area').show();
+              window.scrollTo(0, 0); 
+          });
+
+          
+        }
+
+        function getCurrentVideo(){
+          if(condition == "A"){
+            if(end == 0){
+              return "videoA";
+            }
+            if(end == 1){
+              return "videoB";
+            }
+          }
+          //condition B: Video B then Video A
+          else if(condition == "B"){
+            if(end == 0){
+              return "videoB";
+            }
+            if(end == 1){
+              return "videoA";
+            }
+          }
+          //condition B: Video C then Video D
+          else if(condition == "C"){
+            if(end == 0){
+              return "videoC";
+            }
+            if(end == 1){
+              return "videoD";
+            }
+          }
+          //condition B: Video D then Video C
+          else if(condition == "D"){
+            if(end == 0){
+              return "videoD";
+            }
+            if(end == 1){
+              return "videoC";
+            }
+          }
+        } 
+
+        function millisToMS(millis) {
+          var minutes = Math.floor(millis / 60000);
+          var seconds = ((millis % 60000) / 1000).toFixed(0);
+          return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+        }
+
+        //function taken from the source referenced at the start of this file
+        function ConvertToCSV(objArray) {
+          var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+            var str = '';
+
+            for (var i = 0; i < array.length; i++) {
+                var line = '';
+            for (var index in array[i]) {
+                if (line != '') line += ','
+                  line += array[i][index];
+            }
+            str += line + '\r\n';
+          }
+
+          return str;
+        }
+
+        //submitIEQ
+        function submitForm() {
+          console.log("IEQ submitted");
+          //nested for loop to get all responses
+          for(var questionIndex = 1; questionIndex < 25; questionIndex++){
+            var question = "i" + questionIndex;
+            var radios = document.getElementsByName(question);
+            for (var i=0, length = radios.length; i < length; i++){
+              if(radios[i].checked){
+                //push the answers to the array
+                dataArray.push({
+                  participant: userID,
+                  condition: condition,
+                  switchNo: "NA",
+                  switchStarted: "NA",
+                  duration: "NA",
+                  question: end + "." + questionIndex,
+                  answer: radios[i].value,
+                })
+
+                break;
+              }
+            }
+          }
+      }
+        
+      </script>
+    </body>
+
+</html>
