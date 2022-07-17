@@ -1,2 +1,2 @@
-# experiment-material
-Web created for an empirical experiment.
+# Experiment Material
+Web created for an empirical experiment. 
